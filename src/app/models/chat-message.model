@@ -1,0 +1,14 @@
+export interface ChatMessage {
+  id: string;
+  content: string;
+  timestamp: Date;
+  isUser: boolean;
+  documentReferences?: DocumentReference[];
+}
+
+export interface DocumentReference {
+  documentId: string;
+  documentName: string;
+  pageNumber?: number;
+  confidence: number;
+}
