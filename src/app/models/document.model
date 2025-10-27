@@ -1,0 +1,16 @@
+export interface Document {
+  id: string;
+  name: string;
+  size: number;
+  type: string;
+  uploadDate: Date;
+  status: DocumentStatus;
+  processingProgress?: number;
+}
+
+export enum DocumentStatus {
+  UPLOADING = 'uploading',
+  PROCESSING = 'processing',
+  READY = 'ready',
+  ERROR = 'error'
+}
